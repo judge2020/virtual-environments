@@ -5,4 +5,4 @@ foreach ($package in $commonPackages)
     Choco-Install -PackageName $package.name -ArgumentList $package.args
 }
 
-Invoke-PesterTests -TestFile "ChocoPackages"
+# Invoke-PesterTests -TestFile "ChocoPackages"
