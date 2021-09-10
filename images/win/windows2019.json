@@ -246,18 +246,6 @@
         },
         {
             "type": "powershell",
-            "scripts": [
-                "{{ template_dir }}/scripts/Tests/RunAll-Tests.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "inline": [
-                "if (-not (Test-Path {{user `image_folder`}}\\Tests\\testResults.xml)) { throw '{{user `image_folder`}}\\Tests\\testResults.xml not found' }"
-            ]
-        },
-        {
-            "type": "powershell",
             "inline": [
                 "pwsh -File '{{user `image_folder`}}\\SoftwareReport\\SoftwareReport.Generator.ps1'"
             ],
