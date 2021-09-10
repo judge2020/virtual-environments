@@ -31,14 +31,14 @@ function Invoke-PesterTests {
 
     # Switch ErrorActionPreference to Stop temporary to make sure that tests will fail on silent errors too
     $backupErrorActionPreference = $ErrorActionPreference
-    $ErrorActionPreference = "Stop"
+    $ErrorActionPreference = 'Continue'
     $results = Invoke-Pester -Configuration $configuration
     $ErrorActionPreference = $backupErrorActionPreference
 
     # Fail in case if no tests are run
     if (-not ($results -and ($results.FailedCount -eq 0) -and (($results.PassedCount + $results.SkippedCount) -gt 0))) {
         $results
-        throw "Test run has failed"
+        #throw "Test run has failed"
     }
 }
 
