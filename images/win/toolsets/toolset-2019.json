@@ -1,19 +1,6 @@
 {
     "toolcache": [
         {
-            "name": "Ruby",
-            "arch": "x64",
-            "platform" : "win32",
-            "versions": [
-                "2.4",
-                "2.5",
-                "2.6",
-                "2.7",
-                "3.0"
-            ],
-            "default": "2.5"
-        },
-        {
             "name": "Python",
             "url" : "https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json",
             "arch": "x64",
@@ -29,53 +16,13 @@
             "default": "3.7.*"
         },
         {
-            "name": "Python",
-            "url" : "https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json",
-            "arch": "x86",
-            "platform" : "win32",
-            "versions": [
-                "2.7.*",
-                "3.5.*",
-                "3.6.*",
-                "3.7.*",
-                "3.8.*",
-                "3.9.*"
-            ]
-        },
-        {
-            "name": "PyPy",
-            "arch": "x86",
-            "platform" : "win64",
-            "versions": [
-                "2.7",
-                "3.6",
-                "3.7"
-            ]
-        },
-        {
             "name": "node",
             "url" : "https://raw.githubusercontent.com/actions/node-versions/main/versions-manifest.json",
             "arch": "x64",
             "platform" : "win32",
             "versions": [
-                "10.*",
-                "12.*",
                 "14.*"
             ]
-        },
-        {
-            "name": "go",
-            "url" : "https://raw.githubusercontent.com/actions/go-versions/main/versions-manifest.json",
-            "arch": "x64",
-            "platform" : "win32",
-            "versions": [
-                "1.13.*",
-                "1.14.*",
-                "1.15.*",
-                "1.16.*",
-                "1.17.*"
-            ],
-            "default": "1.15.*"
         }
     ],
     "powershellModules": [
@@ -146,115 +93,11 @@
             "8", "11", "13"
         ]
     },
-    "android": {
-        "platform_min_version": "19",
-        "build_tools_min_version": "19.1.0",
-        "extra_list": [
-            "android;m2repository",
-            "google;m2repository",
-            "google;google_play_services",
-            "m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2",
-            "m2repository;com;android;support;constraint;constraint-layout-solver;1.0.1",
-            "m2repository;com;android;support;constraint;constraint-layout;1.0.2",
-            "m2repository;com;android;support;constraint;constraint-layout;1.0.1"
-        ],
-        "addon_list": [
-            "addon-google_apis-google-24",
-            "addon-google_apis-google-23",
-            "addon-google_apis-google-22",
-            "addon-google_apis-google-21"
-        ],
-        "additional_tools": [
-            "cmake;3.10.2.4988404",
-            "cmake;3.18.1",
-            "patcher;v4"
-        ],
-        "ndk": {
-            "lts": "21",
-            "latest": "22"
-        }
-    },
-    "MsysPackages": {
-        "msys2": [
-            "base-devel",
-            "compression"
-        ],
-        "mingw": [
-            {
-                "arch": "mingw-w64-x86_64",
-                "exec_dir": "mingw64",
-                "runtime_packages": [
-                    {
-                        "name": "clang",
-                        "executables": [
-                            "clang",
-                            "g++",
-                            "gcc"
-                        ]
-                    },
-                    {
-                        "name": "cmake",
-                        "executables": [
-                            "cmake",
-                            "cpack",
-                            "ctest"
-                        ]
-                    },
-                    {
-                        "name": "ragel",
-                        "executables": [
-                            "ragel"
-                        ]
-                    }
-                ],
-                "additional_packages": [
-                    "clang-tools-extra",
-                    "libxml2",
-                    "llvm",
-                    "toolchain"
-                ]
-            },
-            {
-                "arch": "mingw-w64-i686",
-                "exec_dir": "mingw32",
-                "runtime_packages": [
-                    {
-                        "name": "clang",
-                        "executables": [
-                            "clang",
-                            "g++",
-                            "gcc"
-                        ]
-                    },
-                    {
-                        "name": "cmake",
-                        "executables": [
-                            "cmake",
-                            "cpack",
-                            "ctest"
-                        ]
-                    },
-                    {
-                        "name": "ragel",
-                        "executables": [
-                            "ragel"
-                        ]
-                    }
-                ],
-                "additional_packages": [
-                    "libxml2",
-                    "llvm",
-                    "toolchain"
-                ]
-            }
-        ]
-    },
     "windowsFeatures": [
         { "name": "NET-Framework-Features", "includeAllSubFeatures": true },
         { "name": "NET-Framework-45-Features", "includeAllSubFeatures": true },
         { "name": "FS-iSCSITarget-Server", "includeAllSubFeatures": true, "includeManagementTools": true },
         { "name": "Containers" },
-        { "name": "Microsoft-Windows-Subsystem-Linux", "optionalFeature": true },
         { "name": "VirtualMachinePlatform", "optionalFeature": true }
     ],
     "visualStudio": {
@@ -265,8 +108,6 @@
         "workloads": [
             "Component.Dotfuscator",
             "Component.Linux.CMake",
-            "Component.UnityEngine.x64",
-            "Component.Unreal.Android",
             "Microsoft.Component.Azure.DataLake.Tools",
             "Microsoft.Component.PythonTools.Miniconda",
             "Microsoft.Component.PythonTools.Web",
@@ -367,11 +208,6 @@
     },
     "docker": {
         "images": [
-            "mcr.microsoft.com/windows/servercore:ltsc2019",
-            "mcr.microsoft.com/windows/nanoserver:1809",
-            "mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2019",
-            "mcr.microsoft.com/dotnet/framework/runtime:4.8-windowsservercore-ltsc2019",
-            "mcr.microsoft.com/dotnet/framework/sdk:4.8-windowsservercore-ltsc2019"
         ]
     },
     "pipx": [
